@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Colors */
+
+    /* Primary */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+
+    /* Accent */
+    --blue: hsl(248, 32%, 49%);
+
+    /* Neutral */
+    --darkBlue: hsl(249, 10%, 26%);
+    --grayishBlue: hsl(246, 25%, 77%);
+}
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: var(--red);
+    background-image: url(images/bg-intro-desktop.png);
+    margin: 0;
+}
+
+.title {
+    font-size: 50px;
+    line-height: 55px;
+}
+
+.main-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.wrapper {    
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 68px 24px;
+    gap: 45px;
+}
+
+.text-container, .signup-container {
+    flex: 1;
+}
+
+.trial-advertisment {
+    background-color: var(--blue);
+    padding: 18px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    box-shadow: 0 7px rgba(0, 0, 0, 0.15);
+    font-size: 15px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.red-text {
+    color: var(--red);
+}
+
+/* TODO: font sizes */
+
+.signup-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 7px rgba(0, 0, 0, 0.15);
+}
+
+.form-input {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    padding: 15px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--darkBlue);
+    border: 1px solid #DEDEDE;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-input:focus {
+    border: 1px solid var(--blue);
+}
+
+.btn-submit {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    background-color: var(--green);
+    width: 100%;
+    border: none;
+    padding: 15px 0;
+    border-radius: 5px;
+    box-shadow: inset 0 -4px rgba(0, 0, 0, .1);
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+    background: hsla(154, 65%, 68%, 1);
+}
+
+.tas-notice {
+    color: var(--grayishBlue);
+    font-size: 11px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.error-text {
+    padding-top: 6px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 11px;
+    text-align: right;
+    display: none;
+}
+
+.has-error .error-text {
+    display: block;
+}
+
+.has-error .form-input{
+    border-color: var(--red);
+    padding-right: 42px;
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: center right 15px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    body {
+        background-image: url(images/bg-intro-mobile.png);
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .text-container {
+        text-align: center;
+        max-width: 440px;
+    }
+
+    .signup-form {
+        padding: 24px;
+    }
+
+    .text-container, .signup-container {
+        flex: unset;
+    }
+
+    .trial-advertisment {
+        padding-left: 66px;
+        padding-right: 66px;
+    }
+
+    .tas-notice {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
